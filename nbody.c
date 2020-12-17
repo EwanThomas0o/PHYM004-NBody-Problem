@@ -96,8 +96,8 @@ Program will now run and prodce all output files/figures.
 #include <sys/time.h>
 
 
-#define VERSION = "1.1.2";
-#define REV_DATE = "15-Decmber-2020";
+#define VERSION = "1.6.0";
+#define REV_DATE = "17-Decmber-2020";
 
 #define GNU_CALL "gnuplot"
 #define GNU_SCRIPT_1 "gnu_vv.script"
