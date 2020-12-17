@@ -1,0 +1,10 @@
+set key font "Veranda,18"
+set xtics font "Veranda, 12"
+set ytics font "Veranda, 12"
+set ylabel 'Energy (J)' font "Veranda,16" offset 0,6,0
+set xlabel 'Step #' font "Veranda,16"
+set key outside
+set xrange[0:6000]
+set key autotitle columnheader
+plot for [col=1:3] 'energy.dat' using 0:col with lines 
+pause -1

@@ -1,0 +1,12 @@
+set xlabel 'x(m)'
+set ylabel 'y(m)'
+set zlabel 'z(m)'
+set zrange [-200:200]
+set view 0,0,,
+set xrange [-6e12:6e12]
+set yrange [-6e12:6e12]
+set zrange [-100000:100000]
+set key autotitle columnheader
+stats 'nbody_gnuplot.dat' using 0 nooutput
+splot for [i=0: (STATS_blocks - 1)] 'nbody_gnuplot.dat' using 1:2:3 index i with lines
+pause -1

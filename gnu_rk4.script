@@ -1,0 +1,10 @@
+set xlabel 'x(m)'
+set ylabel 'y(m)'
+set zlabel 'z(m)'
+set view 0,0,,
+set xrange[-2e11:2e11]
+set yrange [-2e11:2e11]
+set key autotitle columnheader
+stats 'nbody_gnuplot.dat' using 0 nooutput
+splot for [i=0: STATS_columns/3 ] 'nbody_gnuplot.dat' using 3*i+1:3*i+2:3*i+3 title columnheader(i+1) with lines
+pause -1
